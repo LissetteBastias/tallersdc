@@ -26,7 +26,7 @@ Los datos son un recurso valioso que proporciona información crítica para esta
 
 En un mundo donde cada vez más grandes volúmenes de datos provienen de un número creciente de proveedores, las Oficinas Nacionales de Estadística (ONE) están utilizando enfoques innovadores para mantener estándares y definiciones de datos, sistemas de gestión de privacidad y confidencialidad, e intercambio responsable de datos.
 
-Las ONE tienen un papel de liderazgo que desempeñar en el establecimiento de formas seguras y transparentes de compartir datos, experiencias y mejores prácticas para respaldar el uso de datos con fines de prueba, evaluación, educación y desarrollo. Con la integridad y la confidencialidad de los datos a la vanguardia, las ONE están posicionandose cada vez más para proporcionar herramientas, métodos y enfoques para promover el intercambio responsable de datos, a fin de satisfacer las necesidades de un número creciente de partes interesadas en este ámbito que está en constante cambio.
+Las ONE tienen un papel de liderazgo que desempeñar en el establecimiento de formas seguras y transparentes de compartir datos, experiencias y mejores prácticas para respaldar el uso de datos con fines de prueba, evaluación, educación y desarrollo. Con la integridad y la confidencialidad de los datos a la vanguardia, las ONE están posicionándose cada vez más para proporcionar herramientas, métodos y enfoques que promueven el intercambio responsable de datos, a fin de satisfacer las necesidades de un número creciente de partes interesadas en este ámbito que está en constante cambio.
 
 Las ONE reconocen que se debe cumplir con el llamado a una mayor apertura y transparencia de los datos. Sin embargo, también se comprometen a proteger la confidencialidad y la privacidad integradas en sus tenencias de datos.
 
@@ -71,7 +71,7 @@ Si decide utilizar este material @guia_sdc_ine, le pedimos que lo cite adecuadam
 ```{r, echo=TRUE, eval=FALSE}
 @misc{guia_sdc_ine,
   title = {Guía para el Control de la Divulgación Estadística: Taller práctico},
-  author = {{González, Jonathan,  José Bustos, Julio Guerrero, Lissete Bastías and Nicolas Berhó}},
+  author = {{Jonathan González,  José Bustos, Julio Guerrero, Lissette Bastías and Nicolás Berhó}},
   organization = {Instituto Nacional de Estadísticas},
   address = {Santiago, Chile},
   year = {2021},
