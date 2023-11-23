@@ -22,10 +22,10 @@ El proceso SDC se caracteriza por el balance entre el riesgo de divulgación y l
 
 El objetivo de un proceso SDC bien implementado es encontrar el punto óptimo en el que la utilidad para los usuarios finales se maximice a un nivel de riesgo aceptable.
 
-En el balance entre Riesgo y Utilidad que se muestra en la Figura \@ref(fig:fig1_sec05), por un extremo, el triángulo corresponde a los datos sin procesar, los que no tienen pérdida de información, pero generalmente tienen un riesgo de divulgación más alto que el nivel aceptable. El otro extremo es el cuadrado, que corresponde a la no publicación de datos. En ese caso, no hay riesgo de divulgación, pero tampoco hay utilidad de los datos para los usuarios. Los puntos intermedios corresponden a diferentes opciones de métodos SDC y/o parámetros aplicados a diferentes variables. El proceso SDC busca
+En el balance entre Riesgo y Utilidad que se muestra en la Figura \@ref(fig:fig1), por un extremo, el triángulo corresponde a los datos sin procesar, los que no tienen pérdida de información, pero generalmente tienen un riesgo de divulgación más alto que el nivel aceptable. El otro extremo es el cuadrado, que corresponde a la no publicación de datos. En ese caso, no hay riesgo de divulgación, pero tampoco hay utilidad de los datos para los usuarios. Los puntos intermedios corresponden a diferentes opciones de métodos SDC y/o parámetros aplicados a diferentes variables. El proceso SDC busca
 métodos y parámetros, que son aplicados de una manera que produce una reducción del riesgo de forma muchas veces satisfactoria, minimizándose generalmente la pérdida de información.
 
-```{r fig1_sec05, fig.cap="Balance riesgo-utilidad en un conjunto de datos.", fig.align='center',echo=FALSE,out.width='90%'}
+```{r fig1, fig.cap="Balance riesgo-utilidad en un conjunto de datos.", fig.align='center',echo=FALSE,out.width='90%'}
 imagen1 <- "Imagenes/fig1.png"
 knitr :: include_graphics(imagen1) #comando para insertar objeto/imagen en el documento de salida.
 ```
@@ -415,9 +415,9 @@ confint(obj = mincer1565A, level = 0.95) # después
 ## Mgender     -0.71564602 -0.3630823543
 ```
 
-Si las nuevas estimaciones caen dentro del intervalo de confianza original y los intervalos de confianza nuevos y originales se superponen en gran medida, los datos pueden considerarse válidos para este tipo de regresión después de la anonimización. La Figura \@ref(fig:fig2__sec05) muestra las estimaciones puntuales y los intervalos de confianza para el coeficiente de género en este intercambio para un conjunto de datos de ingresos de muestra y varios métodos y parámetros de SDC. El punto rojo y la barra de confianza (en la parte superior) corresponden a las estimaciones de los datos no tratados, mientras que las otras barras de confianza corresponden a los métodos SDC con diferentes parámetros. La anonimización reduce el número de re-identificaciones esperadas en los datos (eje izquierdo) y las estimaciones puntuales y los intervalos de confianza varían mucho para los diferentes métodos SDC. Elegiríamos un método que reduzca el número esperado de identificaciones, sin cambiar el coeficiente de género y con una gran superposición del intervalo de confianza con el intervalo de confianza estimado a partir de los datos originales.
+Si las nuevas estimaciones caen dentro del intervalo de confianza original y los intervalos de confianza nuevos y originales se superponen en gran medida, los datos pueden considerarse válidos para este tipo de regresión después de la anonimización. La Figura \@ref(fig:fig2) muestra las estimaciones puntuales y los intervalos de confianza para el coeficiente de género en este intercambio para un conjunto de datos de ingresos de muestra y varios métodos y parámetros de SDC. El punto rojo y la barra de confianza (en la parte superior) corresponden a las estimaciones de los datos no tratados, mientras que las otras barras de confianza corresponden a los métodos SDC con diferentes parámetros. La anonimización reduce el número de re-identificaciones esperadas en los datos (eje izquierdo) y las estimaciones puntuales y los intervalos de confianza varían mucho para los diferentes métodos SDC. Elegiríamos un método que reduzca el número esperado de identificaciones, sin cambiar el coeficiente de género y con una gran superposición del intervalo de confianza con el intervalo de confianza estimado a partir de los datos originales.
 
-```{r fig2_sec05, fig.cap="Efecto de la anonimización en las estimaciones puntuales e intervalo de confianza del coeficiente de género en la ecuación de Mincer.", fig.align='center',echo=FALSE,out.width='90%'}
+```{r fig2, fig.cap="Efecto de la anonimización en las estimaciones puntuales e intervalo de confianza del coeficiente de género en la ecuación de Mincer.", fig.align='center',echo=FALSE,out.width='90%'}
 imagen1 <- "Imagenes/fig2.png"
 knitr :: include_graphics(imagen1) #comando para insertar objeto/imagen en el documento de salida.
 ```
@@ -440,7 +440,7 @@ Para hacer visualizaciones apropiadas, necesitamos usar los datos sin procesar y
 Son útiles para realizar comparaciones rápidas de la distribución de variables antes y después de la anonimización. La ventaja de los histogramas es que los resultados son exactos. Sin embargo, la
 visualización depende de los anchos de las barras y el inicio de la primera barra. Los histogramas se pueden utilizar para variables continuas y semicontinuas. Los gráficos de densidad muestran la densidad del kernel de los datos; por lo tanto, la gráfica depende del kernel que se elija y si los datos se ajustan bien al kernel. Sin embargo, los gráficos de densidad son una buena herramienta para ilustrar el cambio de valores y rangos de valores de variables continuas.
 
-Los histogramas se pueden trazar con la función `hist()` y las densidades del kernel con las funciones `plot()` y `density()` en `R` . El Bloque \@ref(exm:bloque11lbn) muestra ejemplos de cómo utilizar estas funciones para ilustrar los cambios en la variable "INC", una variable de ingresos. La función `hist()` necesita como argumento los puntos de ruptura del histograma. Los resultados se muestran en la Figura \@ref(fig:fig3_sec05) y la Figura \@ref(fig:fig4_sec05). Los histogramas y los gráficos de densidad dan una indicación clara de cómo han cambiado los valores: la variabilidad de los datos ha aumentado y la forma de la distribución ha cambiado.
+Los histogramas se pueden trazar con la función `hist()` y las densidades del kernel con las funciones `plot()` y `density()` en `R` . El Bloque \@ref(exm:bloque11lbn) muestra ejemplos de cómo utilizar estas funciones para ilustrar los cambios en la variable "INC", una variable de ingresos. La función `hist()` necesita como argumento los puntos de ruptura del histograma. Los resultados se muestran en la Figura \@ref(fig:fig3) y la Figura \@ref(fig:fig4). Los histogramas y los gráficos de densidad dan una indicación clara de cómo han cambiado los valores: la variabilidad de los datos ha aumentado y la forma de la distribución ha cambiado.
 
 ```{example, bloque11lbn}
 Trazado de histogramas y densidades kernel
@@ -467,14 +467,14 @@ plot(density(sdcInitial@manipNumVars$INC), xlim = c(0, 8000), ylim = c(0, 0.006)
      main = "Density income", xlab = "income")
 ```
 
-```{r fig3_sec05, fig.cap="Histogramas de ingresos antes y después de la anonimización.", fig.align='center',echo=FALSE,out.width='90%'}
+```{r fig3, fig.cap="Histogramas de ingresos antes y después de la anonimización.", fig.align='center',echo=FALSE,out.width='90%'}
 imagen1 <- "Imagenes/fig3.png"
 knitr :: include_graphics(imagen1) #comando para insertar objeto/imagen en el documento de salida.
 ```
 
 **Fuente:** Imagen extraída de [@benschop2021], pág.88.
 
-```{r fig4_sec05, fig.cap="Gráficas de densidad de ingresos antes y después de la anonimización.", fig.align='center',echo=FALSE,out.width='90%'}
+```{r fig4, fig.cap="Gráficas de densidad de ingresos antes y después de la anonimización.", fig.align='center',echo=FALSE,out.width='90%'}
 imagen1 <- "Imagenes/fig4.png"
 knitr :: include_graphics(imagen1) #comando para insertar objeto/imagen en el documento de salida.
 ```
@@ -484,7 +484,7 @@ knitr :: include_graphics(imagen1) #comando para insertar objeto/imagen en el do
 #### Diagramas de caja
 
 Los diagramas de caja brindan una descripción general rápida de los cambios en la dispersión y los valores atípicos de las variables continuas antes y después de la anonimización. El Bloque \@ref(exm:bloque12lbn) a continuación muestra cómo generar diagramas de caja en `R` con la función `boxplot()`. resultado de la figura
-\@ref(fig:fig5_sec05) muestra un ejemplo de una variable de gasto después de agregar ruido. El diagrama de caja muestra claramente que la variabilidad en la variable gasto aumentó como resultado de los métodos de anonimización aplicados.
+\@ref(fig:fig5) muestra un ejemplo de una variable de gasto después de agregar ruido. El diagrama de caja muestra claramente que la variabilidad en la variable gasto aumentó como resultado de los métodos de anonimización aplicados.
 
 ```{example, bloque12lbn}
 Creación de diagramas de caja para variables continuas
@@ -496,7 +496,7 @@ boxplot(sdcObj@origData$TOTFOOD, sdcObj@manipNumVars$TOTFOOD,
 axis(1, at = c(1,2), labels = c('before', 'after'))
 ```
 
-```{r fig5_sec05, fig.cap="Ejemplo de diagramas de caja de una variable de gasto antes y después de la anonimización.", fig.align='center',echo=FALSE,out.width='90%'}
+```{r fig5, fig.cap="Ejemplo de diagramas de caja de una variable de gasto antes y después de la anonimización.", fig.align='center',echo=FALSE,out.width='90%'}
 imagen1 <- "Imagenes/fig5.png"
 knitr :: include_graphics(imagen1) #comando para insertar objeto/imagen en el documento de salida.
 ```
@@ -508,7 +508,7 @@ knitr :: include_graphics(imagen1) #comando para insertar objeto/imagen en el do
 Los gráficos de mosaico univariados y multivariados son útiles para mostrar cambios en las tabulaciones de variables categóricas, especialmente cuando se comparan varios "escenarios" uno al lado del otro. Un escenario aquí se refiere a la elección de métodos de anonimización y sus parámetros. Con gráficos de mosaico podemos, por
 ejemplo, ver rápidamente el efecto de diferentes niveles de k-anonimato o diferencias en los vectores de importancia en el algoritmo de supresión local (ver la Sección [Supresión local].
  
-Ilustramos los cambios en las tabulaciones con un ejemplo de la variable "WATER" antes y después de aplicar PRAM. Podemos usar gráficos de mosaico para ver rápidamente los cambios de cada categoría. El Bloque \@ref(exm:bloque13lbn) muestra el código en `R` . La función `mosaicplot()` está disponible en el paquete base de `R`. Para graficar una tabulación, primero se debe hacer la tabulación con la función `table()`. Para mostrar las etiquetas en `mosaicplot()`, cambiamos la clase de las variables a 'factor'. Al observar el gráfico de mosaico en la Figura \@ref(fig:fig6_sec05), vemos que la PRAM invariante prácticamente no tiene influencia en la distribución univariante.
+Ilustramos los cambios en las tabulaciones con un ejemplo de la variable "WATER" antes y después de aplicar PRAM. Podemos usar gráficos de mosaico para ver rápidamente los cambios de cada categoría. El Bloque \@ref(exm:bloque13lbn) muestra el código en `R` . La función `mosaicplot()` está disponible en el paquete base de `R`. Para graficar una tabulación, primero se debe hacer la tabulación con la función `table()`. Para mostrar las etiquetas en `mosaicplot()`, cambiamos la clase de las variables a 'factor'. Al observar el gráfico de mosaico en la Figura \@ref(fig:fig6), vemos que la PRAM invariante prácticamente no tiene influencia en la distribución univariante.
 
 ```{example, bloque13lbn}
 Creando mosaicos univariados
@@ -536,14 +536,14 @@ mosaicplot(dataWater, main = "", color = 2:10, las = 2)
 
 ```
 
-```{r fig6_sec05, fig.cap="Gráfico de mosaico para ilustrar los cambios en la variable WATER.", fig.align='center',echo=FALSE,out.width='90%'}
+```{r fig6, fig.cap="Gráfico de mosaico para ilustrar los cambios en la variable WATER.", fig.align='center',echo=FALSE,out.width='90%'}
 imagen1 <- "Imagenes/fig6.png"
 knitr :: include_graphics(imagen1) #comando para insertar objeto/imagen en el documento de salida.
 ```
 
 **Fuente:** Imagen extraída de [@benschop2021], pág.90.
 
-Usamos las variables "*gender*" y "*relationship status*" para ilustrar el uso de gráficos de mosaico para la ilustración de cambios en las tabulaciones univariadas introducidas por varios conjuntos de métodos de anonimización. La Tabla \@ref(tab:tbl3lbn) proporciona los métodos aplicados en cada escenario. El escenario 0, el escenario base, muestra las categorías originales de las variables de género y estado civil, mientras que los escenarios 1 a 6 muestran cambios en las categorías después de aplicar diferentes técnicas de anonimización. La tabla muestra una descripción de los métodos de anonimización utilizados en cada escenario. En total, visualizamos el impacto de seis conjuntos diferentes de métodos de anonimización. Podemos usar gráficos de mosaico para ver rápidamente qué conjunto de métodos tiene qué impacto en las variables de *gender* y *relationship status*, que se pueden usar para seleccionar el mejor escenario. Mirando los gráficos de mosaico en la Figura \@ref(fig:fig7_sec05), vemos que los escenarios 2, 5 y 6 dan los cambios más pequeños para la variable de *gender* y los escenarios 3 y 4 para la variable de *relationship status*.
+Usamos las variables "*gender*" y "*relationship status*" para ilustrar el uso de gráficos de mosaico para la ilustración de cambios en las tabulaciones univariadas introducidas por varios conjuntos de métodos de anonimización. La Tabla \@ref(tab:tbl3lbn) proporciona los métodos aplicados en cada escenario. El escenario 0, el escenario base, muestra las categorías originales de las variables de género y estado civil, mientras que los escenarios 1 a 6 muestran cambios en las categorías después de aplicar diferentes técnicas de anonimización. La tabla muestra una descripción de los métodos de anonimización utilizados en cada escenario. En total, visualizamos el impacto de seis conjuntos diferentes de métodos de anonimización. Podemos usar gráficos de mosaico para ver rápidamente qué conjunto de métodos tiene qué impacto en las variables de *gender* y *relationship status*, que se pueden usar para seleccionar el mejor escenario. Mirando los gráficos de mosaico en la Figura \@ref(fig:fig7), vemos que los escenarios 2, 5 y 6 dan los cambios más pequeños para la variable de *gender* y los escenarios 3 y 4 para la variable de *relationship status*.
 
 ```{r tbl3lbn, incluide=FALSE, warning=FALSE, message=FALSE, echo=FALSE}
 library(kableExtra)
@@ -555,7 +555,7 @@ kbl(text_tbl1lbn, caption = "Descripción de métodos de anonimización por esce
   column_spec(2, bold = F, border_right = F)
 ```
 
-```{r fig7_sec05, fig.cap="Comparación de variables de gender y relationship status tratadas versus no tratadas con gráficos de mosaico.", fig.align='center',echo=FALSE,out.width='90%'}
+```{r fig7, fig.cap="Comparación de variables de gender y relationship status tratadas versus no tratadas con gráficos de mosaico.", fig.align='center',echo=FALSE,out.width='90%'}
 imagen1 <- "Imagenes/fig7.png"
 knitr :: include_graphics(imagen1) #comando para insertar objeto/imagen en el documento de salida.
 ```
@@ -563,7 +563,7 @@ knitr :: include_graphics(imagen1) #comando para insertar objeto/imagen en el do
 **Fuente:** Imagen extraída de [@benschop2021], pág.91
 
 PRAM preserva las distribuciones univariadas. Por lo tanto, en este caso es más interesante observar los gráficos de mosaico multivariado. Los diagramas de mosaico también son una herramienta poderosa para mostrar cambios en
-tabulaciones cruzadas/tablas de contingencia. El Bloque \@ref(exm:bloque14lbn) a continuación muestra cómo generar gráficos de mosaico para dos variables. Para comparar los cambios, necesitamos comparar dos gráficos diferentes. La Figura \@ref(fig:fig8_sec05) y la Figura \@ref(fig:fig9_sec05) ilustran que la PRAM no conserva las tablas
+tabulaciones cruzadas/tablas de contingencia. El Bloque \@ref(exm:bloque14lbn) a continuación muestra cómo generar gráficos de mosaico para dos variables. Para comparar los cambios, necesitamos comparar dos gráficos diferentes. La Figura \@ref(fig:fig8) y la Figura \@ref(fig:fig9) ilustran que la PRAM no conserva las tablas
 de doble entrada en este caso.
 
 ```{example, bloque14lbn}
@@ -596,14 +596,14 @@ ROOFTOILETafter <- t(table(factor(sdcHH@manipPramVars$ROOF, levels = c(1,2, 3, 4
 mosaicplot(ROOFTOILETafter, main = "", las = 2, color = 2:6)
 ```
 
-```{r fig8_sec05, fig.cap="Gráfico de mosaico de las variables ROOF e TOILET antes de la anonimización.", fig.align='center',echo=FALSE,out.width='90%'}
+```{r fig8, fig.cap="Gráfico de mosaico de las variables ROOF e TOILET antes de la anonimización.", fig.align='center',echo=FALSE,out.width='90%'}
 imagen1 <- "Imagenes/fig8.png"
 knitr :: include_graphics(imagen1) #comando para insertar objeto/imagen en el documento de salida.
 ```
 
 **Fuente:** Imagen extraída de [@benschop2021],pág. 92.
 
-```{r fig9_sec05, fig.cap="Gráfico de mosaico de las variables ROOF e TOILET después de la anonimización.", fig.align='center',echo=FALSE,out.width='90%'}
+```{r fig9, fig.cap="Gráfico de mosaico de las variables ROOF e TOILET después de la anonimización.", fig.align='center',echo=FALSE,out.width='90%'}
 imagen1 <- "Imagenes/fig9.png"
 knitr :: include_graphics(imagen1) #comando para insertar objeto/imagen en el documento de salida.
 ```
